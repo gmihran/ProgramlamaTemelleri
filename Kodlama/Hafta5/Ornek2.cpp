@@ -3,7 +3,7 @@
 int main(void) {
   setlocale(LC_ALL,"Turkish");
   //Klavyeden 0 girilene kadar girilen değerleri toplayan ve toplam değeri ekrana yazdıran program
-  /*
+  
   int sayi,toplam=0;
   printf("0 girilene kadar değerleri toplayan program:\n");
 gitsayi:
@@ -46,7 +46,7 @@ gitsinav:
     printf("DD");
   else
     printf("FF");
-*/
+  printf("\n");
   //Girilen iki sayıdan hangisinin büyük olduğunu veya eşitse eşit olduklarını ekrana yazdıralım
   //Örn: 30 40 girerse; 40 büyüktür
   //Örn: 35 30 girerse; 35 büyüktür
@@ -61,7 +61,7 @@ gitsinav:
   //Negatif sayı veya nötr(0) girilmiş ise “hatalı değer” çıktısını verecek
   
   int gun;
-  /*
+  
   printf("Haftanın kaçıncı günü:");
   scanf("%d",&gun);
   
@@ -85,6 +85,7 @@ gitsinav:
     else
       printf("Pazar");
   }
+  printf("\n");
   
   //int gun;
 gitgun:  
@@ -120,7 +121,8 @@ gitgun:
 		printf("Hatalı değer");
 		break;
 }
-*/
+  printf("\n");
+
   
   /*Örnek - 6.	Bir ürünün alış fiyatı, vergi oranı 
 	ve kar oranına göre satış fiyatını hesaplatıp ekrana yazdırınız.
@@ -128,7 +130,7 @@ gitgun:
 	b.Eğer vergi oranı 0 ile 1 arasında bir değer değilse vergi oranı tekrar istenecek
 	c.Kar eklenmiş fiyat = alış fiyatı + alış fiyatı * kar oranı
 	d.Satış fiyatı = kar eklenmiş fiyat + kar eklenmiş fiyat * vergi oranı
-
+  */
   float alis,vergi,kar,satis;
   printf("Alış fiyatını giriniz:");
   scanf("%f",&alis);
@@ -145,7 +147,8 @@ gitgun:
       goto gitvergi;
   satis=satis+satis*vergi;
   printf("Satış fiyatı:%.1f",satis);
-  */
+  printf("\n");
+  
   //Girilen ay bilgisine göre mevsimleri ekrana getiren program
   //12-1-2 Kış
   //3-4-5 İlkbahar
@@ -164,6 +167,7 @@ gitgun:
     printf("Sonbahar");
   else
     printf("Hatalı değer");
+  
   //Ödev: Bu örnek switch case ile çözülebilir.
   /*
   case 3:
