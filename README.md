@@ -1,5 +1,5 @@
-# Programlama Temelleri
-2019-2020 Programlama Temelleri ve Algoritma Ders Notları ve Örnekleri
+# 2019-2020 Programlama Temelleri ve Algoritma Ders Notları ve Örnekleri
+
 
 Visual Studio 2017 İndirme Linki : https://visualstudio.microsoft.com/tr/vs/older-downloads/
 
