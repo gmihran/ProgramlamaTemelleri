@@ -3,11 +3,11 @@
 using namespace std;
 int main() {
   int x=5,y,z;
-/*
+
   y=x++;
   z=x+y;
   cout << x << "-" << y << "-" << z <<endl;
-*/
+
   //Kullanıcıdan aldığımız sayıya kadar ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
   //Ör; 10 girerse;
 	/*
@@ -23,7 +23,7 @@ int main() {
 	10101010101010101010
   */
   int sayi,i,j;
-  /*
+  
   cout << "Sayı:";
   cin >> sayi;
   for (i=1;i<=sayi;i++)
@@ -32,8 +32,8 @@ int main() {
       cout << i;
     cout << endl;
   }
-  cout << i << j << endl;
-*/
+  //cout << i << j << endl;
+
   //i ve j kullanıcının girdiği sayının 1 fazlasına eşittir. Çünkü bu değer şartı sağlamadığı için döngüler sona erer.
 
   //Kullanıcının girdiği sayıya kadar (sayı dahil değil) ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
@@ -47,7 +47,7 @@ int main() {
 	6 666666
 	*/
   //int sayi,i,j;
-/*
+
   cout << "Sayı:";
   cin >> sayi;
   for (i=1;i<sayi;i++)
@@ -57,7 +57,7 @@ int main() {
       cout << i;
     cout << endl;
   }
-*/
+
 
   //Ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
 	/*
@@ -70,7 +70,7 @@ int main() {
 	*/
   //1.çözüm:
   int sayac=0;
-/*
+
   for (i=1;i<=6;i++)
   {
     for (j=1;j<=i;j++)
@@ -85,7 +85,7 @@ int main() {
       cout << sayac++ << " ";
     cout << endl;
   }
-*/
+
   //Kullanıcının girdiği değer kadar satırda ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
   //Ör; 5 girerse;
 	/*
@@ -96,7 +96,7 @@ int main() {
 	11 12 13 14 15
 	*/
   //int sayac,sayi,i,j;
-/*
+
   sayac=0;
   cout << "Sayı:";
   cin >> sayi;
@@ -106,7 +106,7 @@ int main() {
       cout << ++sayac << " ";
     cout << endl;
   }
-*/
+
   //Kullanıcının girdiği değere kadar ekrana aşağıdaki çıktıyı yazdırmaya çalışalım
   //Ör; 14 girerse;
 	/*
@@ -117,7 +117,7 @@ int main() {
 	11 12 13 14 
 	*/
   //int sayac,sayi,i,j;
-/*
+
   sayac=0;
   cout << "Sayı:";
   cin >> sayi;
@@ -131,26 +131,27 @@ int main() {
         //j döngüsü kırıldı
         break;
     }
+    cout << endl;
     if (sayac==sayi)
       //i döngüsü kırıldı
       break;  
-    cout << endl;
+    
   }
-*/
+
   //1 ile 10 arasındaki sayıları while döngüsü ile ekrana yazdıralım
   //while(koşul) {}
   //while(true) sonsuz döngüdür
   int deger=1;
-  /*
   while(deger<=10)
   {
     cout << deger;
     deger=deger+1;
   }
-  */
+  cout << endl;
+
   //Kullanıcının girdiği değere kadar olan sayıları ekrana yazdıralım
   deger=1;
-  /*
+  
   cout << "Sayı:";
   cin >> sayi;
   while(deger<=sayi)
@@ -159,17 +160,19 @@ int main() {
     cout << deger;
     deger=deger+1; //sayac
   }
+  cout << endl;
   //Sayıyı tersten yazdıralım:
   while(sayi>=1)
   {
     cout << sayi--;
   }
-  */
+  cout << endl;
+
   //Kullanıcı 0 sayısını girene kadar girdiği değerlerin toplamını hesaplayıp ekrana yazdıralım
   //1.yöntem:
   int toplam=0;
   sayi=1; //döngüye girebilmesi için sayı değerinin 0 olmaması gerekiyor
-/*
+
   while(sayi!=0)
   {
     cout << "Sayı:";
@@ -193,6 +196,7 @@ int main() {
   cout << "Toplam:" << toplam << endl;
 
   //3.yöntem
+  toplam=0;
   do
   {
     //Bu döngü en az 1 kez çalışır
@@ -224,7 +228,7 @@ int main() {
   cout << " miktarı:" << psayac << endl;
   cout << "Negatif toplamı:" << ntoplam;
   cout << " miktarı:" << nsayac << endl;
-*/
+
   //Girilen sayının tersten okunuşu kendisine eşit mi?
 	//sayı=1234
 	//ters=4321
@@ -242,7 +246,7 @@ int main() {
   //sayi=sayi/10=1
   //ters=ters*10+sayi%10=320+1=321
 	int sayiyedek,ters=0;
-/*
+
   cout << "Sayı:";
   cin >> sayi;
   sayiyedek=sayi;
@@ -259,7 +263,8 @@ int main() {
     cout << "Sayının tersi kendisine eşit";
   else
     cout << "Sayının tersi kendisine eşit değil";
-*/
+  cout << endl;
+
   //Girilen kelimeyi ekrana yazdıralım
   string kelime;
   cout << "Kelime:";
@@ -270,7 +275,7 @@ int main() {
   //Kelimenin karakter sayısını (uzunluğunu) ekrana yazdıralım
   cout << "Kelimenin uzunluğu:" << kelime.length() << endl;
   //Kelimenin son harfini ekrana yazdıralım
-  cout << kelime[kelime.length()-1] << endl;
+  cout << "Kelimenin son harfi:" << kelime[kelime.length()-1] << endl;
 
 
 }
