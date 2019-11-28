@@ -60,7 +60,8 @@ int main() {
   }
   cout << "Negatif Toplam:" << ntoplam << endl;
 
-  //Kullanıcıdan bir sayı isteyelim. Rastgele üretilen 1-100 arasındaki 10 sayı arasında kullanıcının girdiği sayı varsa "Tebrikler bildiniz", yoksa "Üzgünüm bilemediniz" çıktısı verilsin
+  //Kullanıcıdan bir sayı isteyelim. Rastgele üretilen 1-100 arasındaki 10 sayı arasında 
+  //kullanıcının girdiği sayı varsa "Tebrikler bildiniz", yoksa "Üzgünüm bilemediniz" çıktısı verilsin
   int tahmin, random[10];
   srand(time(NULL)); //Program her çalıştırıldığında rand fonksiyonun farklı değerler üretmesini sağlar.
   cout << "Tahmininiz:";
