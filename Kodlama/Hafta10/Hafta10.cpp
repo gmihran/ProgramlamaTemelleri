@@ -7,10 +7,12 @@ using namespace std;
 int main() {
   setlocale(LC_ALL,"turkish");
   srand(time(NULL));
+  
+  //Araştırma ödevi: C++ 11 (Modern C++) ile gelen yenilikler araştırılıp, 
+  //10 tane yenilik kendi cümlelerinizle kaynak belirterek ve örnekler gerçekleştirilip ekran görüntüsü alınarak 
+  //bir word belgesi veya powerpoint sunusu olarak online.beykoz üzerinden teslim edilecek.
+
   //Ödev: Bu soruyu while döngüsü ile çözmeye çalışalım.
-
-  //Asıl ödev: C++ 11 (Modern C++) ile gelen yenilikler araştırılıp, 10 tane yenilik kendi cümlelerinizle kaynak belirterek ve örnekler gerçekleştirilip ekran görüntüsü alınarak bir word belgesi veya powerpoint sunusu olarak online.beykoz üzerinden teslim edilecek.
-
   //İlk 100 asal sayıyı bir dizide tutarak bu diziyi ekrana yazdıralım
   int i;
   int asal[100],sayi=2,miktar;
@@ -136,16 +138,19 @@ int main() {
     }
     //kelimeyi doğru tahmin etti mi? Yani bütün harflerini bildi mi kontrol edelim.
     //1. ihtimal: harf char dizisinin içinde _ karakteri yoksa doğru bilmiştir.
-    //2. ihtimal: harf char dizisinin bütün karakterlerini alıp string yaparsak ve kelime ile karşılaştırırsak ve eşit olursa doğru bilmiştir.
-    //3. ihtimal: kelime değişkenin içindeki tüm harfleri char dizisinin harfleri ile karşılaştırıp, bütün harfler birbirine eşitse doğru bilmiştir. 
+    //2. ihtimal: harf char dizisinin bütün karakterlerini alıp string yaparsak ve kelime ile karşılaştırırsak ve eşit olursa 
+    //doğru bilmiştir.
+    //3. ihtimal: kelime değişkenin içindeki tüm harfleri char dizisinin harfleri ile karşılaştırıp, 
+    //bütün harfler birbirine eşitse doğru bilmiştir. 
+	  
     //Aşağıdaki işlem birden fazla yöntemle çözülebilir.
-    //Eğer _ sayısı 0'a eşitse yine doğru bilmiştir.
-    bool kontrol=true; //Kullanıcı doğru bilmiştir gibi düşünüyorum
+    //Eğer _ sayısı 0'a eşitse doğru bilmiştir. Bunun doğruluğu kontrol edilebilir.
+    bool kontrol=true; //Kullanıcının doğru bilmiş olduğunu farzediyoruz
     for (char deger:harf)
     {
       if (deger=='_')
       {
-        //Kullanıcı doğru bilememiş
+        //Kullanıcı doğru bilememiştir
         kontrol=false;
         break;
         //for döngüsü kırıldı. _ değerine bakmaya devam etmedi.
