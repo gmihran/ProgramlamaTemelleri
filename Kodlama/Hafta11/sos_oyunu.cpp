@@ -32,13 +32,13 @@ void durum() {
 	int sayac = 0;
 	for (i = 0; i < 3; i++) {
 		for (j = 0; j < 3; j++) {
-			if (sos[i][j] == '#') {
-				sayac++;
-			}
-		}
+			if (sos[i][j] == '#') 
+					sayac++;	
+		}		
 	}
-	if (sayac == 0)
+	if (sayac == 0) 
 		kontrol = true; //oyun bitti
+		
 }
 void kullanici() {
 	int satir, sutun;
@@ -64,17 +64,17 @@ int main()
 	
 	do{
 		pc();
-		yazdir();
 		durum();
+		if (kontrol)
+			break;
+		yazdir();
 		kullanici();
+		
 	} while (kontrol == false);
 	//else if () {
 		//SOS yazıldı mı? Kontrol edilecek
-
 	//}
 	cout << "Oyun bitti";
 		
-	
-	
 
 }
