@@ -1,8 +1,8 @@
 #include "pch.h"
 #include <iostream>
 #include <string>
-//Bu örnek Yapay Zeka ile çözülebilir
-//Bilgisayar SOS yazmaya çalışabilir veya kullanıcının yazmaması için gerekli yerleri doldurabilir.
+//Bu Ã¶rnek Yapay Zeka ile Ã§Ã¶zÃ¼lebilir
+//Bilgisayar SOS yazmaya Ã§alÄ±ÅŸabilir veya kullanÄ±cÄ±nÄ±n yazmamasÄ± iÃ§in gerekli yerleri doldurabilir.
 using namespace std;
 char sos[3][3] = { '#','#','#','#','#','#','#','#','#' }, pc_deger;
 int i, j;
@@ -16,7 +16,7 @@ void yazdir(){
 	}
 }
 void pc() {
-	//Eğer # kalmamışsa bu fonksiyon çağrılmamalıdır
+	//EÄŸer # kalmamÄ±ÅŸsa bu fonksiyon Ã§aÄŸrÄ±lmamalÄ±dÄ±r
 	char deger[2] = { 'S','O' };
 	int x = rand() % 2 + 0;
 	pc_deger = deger[x];
@@ -44,14 +44,14 @@ void kullanici() {
 	int satir, sutun;
 	char deger;
 	do{
-	cout << "Satır değeri:";
+	cout << "SatÄ±r deÄŸeri:";
 	cin >> satir;
-	cout << "Sütun değeri:";
+	cout << "SÃ¼tun deÄŸeri:";
 	cin >> sutun;
 	} while (sos[satir-1][sutun-1] != '#');
 	cout << "S-O :";
 	cin >> deger;
-	//Burada S-O doğru girildi mi? Kontrol edilecek.
+	//Burada S-O doÄŸru girildi mi? Kontrol edilecek.
 	sos[satir - 1][sutun - 1] = deger;
 }
 
@@ -59,16 +59,17 @@ int main()
 {
 	
 	//sos oyunu
-	//Bilgisayar boş olan alanlara rastgele s o s koyar
-	//Biz de onu yenmeye çalışırız
+	//Bilgisayar boÅŸ olan alanlara rastgele s o s koyar
+	//Biz de onu yenmeye Ã§alÄ±ÅŸÄ±rÄ±z
 	
 	do{
-	yazdir();
 		pc();
+		yazdir();
+		durum();
 		kullanici();
 	} while (kontrol == false);
 	//else if () {
-		//SOS yazıldı mı? Kontrol edilecek
+		//SOS yazÄ±ldÄ± mÄ±? Kontrol edilecek
 
 	//}
 	cout << "Oyun bitti";
