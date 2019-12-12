@@ -1,6 +1,6 @@
 #include "pch.h"
 #include <iostream>
-#include <string>
+#include <locale.h>
 //Bu örnek Yapay Zeka ile çözülebilir
 //Bilgisayar SOS yazmaya çalışabilir veya kullanıcının yazmaması için gerekli yerleri doldurabilir.
 using namespace std;
@@ -41,6 +41,7 @@ void durum() {
 		
 }
 void kullanici() {
+	//Eğer # kalmamışsa bu fonksiyon çağrılmamalıdır
 	int satir, sutun;
 	char deger;
 	do{
@@ -57,11 +58,10 @@ void kullanici() {
 
 int main()
 {
-	
 	//sos oyunu
 	//Bilgisayar boş olan alanlara rastgele s o s koyar
 	//Biz de onu yenmeye çalışırız
-	
+	setlocale(LC_ALL, "turkish");
 	do{
 		pc();
 		durum();
@@ -73,8 +73,8 @@ int main()
 	} while (kontrol == false);
 	//else if () {
 		//SOS yazıldı mı? Kontrol edilecek
-	//}
-	cout << "Oyun bitti";
-		
 
+	//}
+	yazdir();
+	cout << "Oyun bitti";
 }
