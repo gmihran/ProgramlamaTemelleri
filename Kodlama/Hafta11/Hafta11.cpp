@@ -1,4 +1,4 @@
-//Bu örneği Visual Studio 2017 C++ ile oluşturduk
+//Bu Ã¶rneÄŸi Visual Studio 2017 C++ ile oluÅŸturduk
 
 #include "pch.h"
 #include <iostream>
@@ -6,8 +6,8 @@
 #include <random>
 #include <time.h>
 
-//#include <bits/stdc++.h> //Visual studio'da bu kütüphanenin eklenmesine gerek yoktur.
-//https://repl.it/ üzerinden çalıştırmak için ekledik.
+//#include <bits/stdc++.h> //Visual studio'da bu kÃ¼tÃ¼phanenin eklenmesine gerek yoktur.
+//https://repl.it/ Ã¼zerinden Ã§alÄ±ÅŸtÄ±rmak iÃ§in ekledik.
 
 using namespace std;
 int main() {
@@ -15,7 +15,7 @@ int main() {
 	srand(time(NULL));
 	int matris[2][3];
 	//matris[satir][sutun];
-	//Matrisin içine 1 ile 6 arasındaki sayıları atayalım
+	//Matrisin iÃ§ine 1 ile 6 arasÄ±ndaki sayÄ±larÄ± atayalÄ±m
 	matris[0][0] = 1;
 	matris[0][1] = 2;
 	matris[0][2] = 3;
@@ -35,7 +35,7 @@ int main() {
 		}
 	}
 	cout << endl;
-	//3*2 bir matrise rastgele 1-20 arasında değerler atayıp ekrana yazdıralım
+	//3*2 bir matrise rastgele 1-20 arasÄ±nda deÄŸerler atayÄ±p ekrana yazdÄ±ralÄ±m
 	int matris2[3][2];
 	//int satir,sutun;
 	for (satir = 0; satir < 3; satir++) {
@@ -46,7 +46,7 @@ int main() {
 		cout << endl;
 	}
 
-	//Bu matristeki en büyük değeri bulup ekrana yazdıralım
+	//Bu matristeki en bÃ¼yÃ¼k deÄŸeri bulup ekrana yazdÄ±ralÄ±m
 	int mak = 1;
 	//mak=INT_MIN;
 	//cout << mak << endl;
@@ -58,7 +58,7 @@ int main() {
 	}
 	cout << "Mak:" << mak << endl;
 	int mak2 = 1; //mak2=INT_MIN;
-	//2.en büyük değeri bulalım.
+	//2.en bÃ¼yÃ¼k deÄŸeri bulalÄ±m.
 	for (satir = 0; satir < 3; satir++) {
 		for (sutun = 0; sutun < 2; sutun++) {
 			if (matris2[satir][sutun] >= mak2 && matris2[satir][sutun] != mak)
@@ -67,7 +67,7 @@ int main() {
 	}
 	cout << "2.Mak:" << mak2 << endl;
 
-	//Aynı döngü içerisinde mak ve mak2 değerlerini bulalım
+	//AynÄ± dÃ¶ngÃ¼ iÃ§erisinde mak ve mak2 deÄŸerlerini bulalÄ±m
 	mak = 1; mak2 = 1;
 	for (satir = 0; satir < 3; satir++) {
 		for (sutun = 0; sutun < 2; sutun++) {
@@ -84,7 +84,7 @@ int main() {
 	cout << "2.Mak:" << mak2 << endl;
 
 
-	//Matrisin en büyük elemanının bulunduğu sütunda yer alan en küçük elemanı bulalım
+	//Matrisin en bÃ¼yÃ¼k elemanÄ±nÄ±n bulunduÄŸu sÃ¼tunda yer alan en kÃ¼Ã§Ã¼k elemanÄ± bulalÄ±m
 	//matris2[3][2]
 	mak = 1;
 	int maksutun;
@@ -102,21 +102,24 @@ int main() {
 		if (min > matris2[satir][maksutun])
 			min = matris2[satir][maksutun];
 	}
-	cout << "Mak değerin olduğu sütun:" << maksutun + 1 << endl;
-	cout << "Mak değerin olduğu sütundaki min değeri:" << min << endl;
+	cout << "Mak deÄŸerin olduÄŸu sÃ¼tun:" << maksutun + 1 << endl;
+	cout << "Mak deÄŸerin olduÄŸu sÃ¼tundaki min deÄŸeri:" << min << endl;
 
-	//4*4'lük içerisinde -20 ile 50 arasında rastgele değer tutan matriste yer alan satırlardaki ve sütunlardaki değerlerden en büyük ve en küçük değerleri ekrana yazdıralım
+	//4*4'lÃ¼k iÃ§erisinde -20 ile 50 arasÄ±nda rastgele deÄŸer tutan matriste yer alan 
+	//satÄ±rlardaki ve sÃ¼tunlardaki deÄŸerlerden en bÃ¼yÃ¼k ve en kÃ¼Ã§Ã¼k deÄŸerleri ekrana yazdÄ±ralÄ±m
 	int rastgele[4][4], i, j;
 	for (i = 0; i < 4; i++) {
 		for (j = 0; j < 4; j++) {
 			rastgele[i][j] = rand() % 71 - 20;
-			//Son değer 71+(-20)-1=50
+			//Son deÄŸer 71+(-20)-1=50
 			cout << rastgele[i][j] << "\t";
 		}
 		cout << endl;
 	}
-	//Değerlerimiz -20 ile 50 arasında olduğu için aşağıdaki atamaları yapıyoruz. Min değerine alabileceği maksimum değeri, mak değerine alabileceği minimum değeri atıyoruz
-	int min_satir[4] = { 50,50,50,50 }, mak_satir[4] = { -20,-20,-20,-20 }, min_sutun[4] = { 50,50,50,50 }, mak_sutun[4] = { -20,-20,-20,-20 };
+	//DeÄŸerlerimiz -20 ile 50 arasÄ±nda olduÄŸu iÃ§in aÅŸaÄŸÄ±daki atamalarÄ± yapÄ±yoruz. 
+	//Min deÄŸerine alabileceÄŸi maksimum deÄŸeri, mak deÄŸerine alabileceÄŸi minimum deÄŸeri atÄ±yoruz
+	int min_satir[4] = { 50,50,50,50 }, mak_satir[4] = { -20,-20,-20,-20 };
+	int min_sutun[4] = { 50,50,50,50 }, mak_sutun[4] = { -20,-20,-20,-20 };
 	for (i = 0; i < 4; i++) {
 		for (j = 0; j < 4; j++) {
 			if (rastgele[i][j] < min_satir[i])
@@ -134,10 +137,10 @@ int main() {
 	}
 	for (i = 0; i < 4; i++)
 	{
-		cout << i + 1 << ".satırdaki mak:" << mak_satir[i] << endl;
-		cout << i + 1 << ".satırdaki min:" << min_satir[i] << endl;
-		cout << i + 1 << ".sütundaki mak:" << mak_sutun[i] << endl;
-		cout << i + 1 << ".sütundaki min:" << min_sutun[i] << endl;
+		cout << i + 1 << ".satÄ±rdaki mak:" << mak_satir[i] << endl;
+		cout << i + 1 << ".satÄ±rdaki min:" << min_satir[i] << endl;
+		cout << i + 1 << ".sÃ¼tundaki mak:" << mak_sutun[i] << endl;
+		cout << i + 1 << ".sÃ¼tundaki min:" << min_sutun[i] << endl;
 	}
 
 	char harfler[26] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','q','s','t','u','v','x','w','y','z' };
@@ -146,25 +149,67 @@ int main() {
 	int random;
 	for (i = 0; i < 25; i++ ) {
 		for (j = 0; j < 6; j++) {
-			random = rand() % 26 + 0; //0 ile 25 arasında değer üretir
+			random = rand() % 26 + 0; //0 ile 25 arasÄ±nda deÄŸer Ã¼retir
 			kelime[i][j] = harfler[random];
 			cout << kelime[i][j];
 		}
 		cout << endl;
 	}
+	
+	//sessiz sesli sessiz sesli sessiz sesli
 	cout << "-------------------------------" << endl;
 	char sesli[5] = { 'a','e','i','o','u' };
 	char sessiz[21] = {'b','c','d','f','g','h','j','k','l','m','n','p','r','q','s','t','v','x','w','y','z' };
 	for (i = 0; i < 25; i++) {
 		for (j = 0; j < 6; j++) {
 			if (j % 2 == 0) {
-				random = rand() % 21 + 0; //0 ile 20 arasında değer üretir
+				random = rand() % 21 + 0; //0 ile 20 arasÄ±nda deÄŸer Ã¼retir
 				kelime[i][j] = sessiz[random];
 			}
 			else {
-				random = rand() % 5 + 0; //0 ile 4 arasında değer üretir
+				random = rand() % 5 + 0; //0 ile 4 arasÄ±nda deÄŸer Ã¼retir
 				kelime[i][j] = sesli[random];
 			}
+			cout << kelime[i][j];
+		}
+		cout << endl;
+	}
+	
+	cout << "-------------------------------" << endl;
+	/*
+	sessiz sesli sessiz sessiz sesli sessiz
+	sayac%2==1 
+	1 =sessiz
+	2 =sesli
+	3 =sessiz
+	4 =sessiz ->1
+	5 =sesli  ->2
+	6 =sessiz ->3
+	
+	if (sayac==3)
+	sayac=1;
+	
+	sayac++;
+	//Bu yÃ¶ntem dÄ±ÅŸÄ±nda farklÄ± yollarla da Ã§Ã¶zÃ¼lebilir.
+	*/
+	sayac = 1;
+	for (i = 0; i < 25; i++) {
+		for (j = 0; j < 6; j++) {
+			//if (sayac==1 || sayac==3 || sayac==4 || sayac==6) bu ÅŸekilde kontrol edilirse; 
+			//if (sayac == 3) sayac = 1; else 
+			//adÄ±mlarÄ±na gerek kalmaz
+			if (sayac%2==1) {
+				random = rand() % 21 + 0; //0 ile 20 arasÄ±nda deÄŸer Ã¼retir
+				kelime[i][j] = sessiz[random];
+			}
+			else {
+				random = rand() % 5 + 0; //0 ile 4 arasÄ±nda deÄŸer Ã¼retir
+				kelime[i][j] = sesli[random];
+			}
+			if (sayac == 3)
+				sayac = 1;
+			else
+				sayac++;			
 			cout << kelime[i][j];
 		}
 		cout << endl;
