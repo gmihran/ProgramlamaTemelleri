@@ -230,9 +230,11 @@ int main() {
   cout << " miktarı:" << nsayac << endl;
 
   //Girilen sayının tersten okunuşu kendisine eşit mi?
-	//sayı=1234
-	//ters=4321
+  //ÖR:
+  //sayı=1234
+  //ters=4321
   //Sayının tersi kendisine eşit değil
+  //ÖR:
   //sayı=19891
   //tersi=19891
   //Sayının tersi kendisine eşit
@@ -245,7 +247,7 @@ int main() {
   //ters=ters*10+sayi%10=30+2=32
   //sayi=sayi/10=1
   //ters=ters*10+sayi%10=320+1=321
-	int sayiyedek,ters=0;
+  int sayiyedek,ters=0;
 
   cout << "Sayı:";
   cin >> sayi;
