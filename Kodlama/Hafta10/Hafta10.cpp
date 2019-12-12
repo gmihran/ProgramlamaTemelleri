@@ -36,7 +36,8 @@ int main() {
   }
   //Modern C++ ile gelen bir özellik:
   for (int deger:asal)
-  //for döngüsü ile asal dizisinin içinde gezinmeyi sağladık. Bu döngüde asal dizisinin içindeki değerler deger değişkeni içerisinde teker teker saklanacak.
+  //for döngüsü ile asal dizisinin içinde gezinmeyi sağladık. 
+  //Bu döngüde asal dizisinin içindeki değerler deger değişkeni içerisinde teker teker saklanacak.
     cout << deger << " ";
   cout << endl;
 
@@ -48,13 +49,14 @@ int main() {
   s=1234;
   cout << s << endl;
 
-  //50-80 değerleri arasında rastgele üretilen 10 sayıdan  en büyük ve en küçük sayıyı, tek ve çift sayıların miktarını ve ortalamasını ekrana yazdıralım
-	//Ör : Klavyeden 2,3,-4,1,-3 girilirse;
-	//Çıktı: 
-	//En büyük sayı: 3 
-	//En küçük sayı: -4
-	//Pozitif: 3 tane sayı vardır. Ortalama: 2
-	//Negatif: 2 tane sayı vardır. Ortalama: -3.5
+  //50-80 değerleri arasında rastgele üretilen 10 sayıdan  en büyük ve en küçük sayıyı, 
+  //tek ve çift sayıların miktarını ve ortalamasını ekrana yazdıralım
+  //Ör : Klavyeden 2,3,-4,1,-3 girilirse;
+  //Çıktı: 
+  //En büyük sayı: 3 
+  //En küçük sayı: -4
+  //Pozitif: 3 tane sayı vardır. Ortalama: 2
+  //Negatif: 2 tane sayı vardır. Ortalama: -3.5
   int rastgele[10];
   //int i;
   for (i=0;i<10;i++)
@@ -140,7 +142,7 @@ int main() {
     //1. ihtimal: harf char dizisinin içinde _ karakteri yoksa doğru bilmiştir.
     //2. ihtimal: harf char dizisinin bütün karakterlerini alıp string yaparsak ve kelime ile karşılaştırırsak ve eşit olursa 
     //doğru bilmiştir.
-    //3. ihtimal: kelime değişkenin içindeki tüm harfleri char dizisinin harfleri ile karşılaştırıp, 
+    //3. ihtimal: kelime değişkeninin içindeki tüm harfleri char dizisinin harfleri ile karşılaştırdığımızda 
     //bütün harfler birbirine eşitse doğru bilmiştir. 
 	  
     //Aşağıdaki işlem birden fazla yöntemle çözülebilir.
@@ -153,7 +155,7 @@ int main() {
         //Kullanıcı doğru bilememiştir
         kontrol=false;
         break;
-        //for döngüsü kırıldı. _ değerine bakmaya devam etmedi.
+        //for döngüsü kırıldı. _ değerini bulduğumuz için tekrar bakmaya devam etmedik.
       }
     }
     if (kontrol)
