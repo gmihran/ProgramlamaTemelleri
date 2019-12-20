@@ -32,7 +32,7 @@ int main()
 
 	srand(time(NULL));
 
-	/*
+	
 	topla();
 	topla(2,4);
 	sayi1 = 3;
@@ -45,7 +45,7 @@ int main()
 	cout << toplam(3, 6) << endl;
 	toplamlar = toplam(3,6);
 	cout << toplamlar << endl;
-	*/
+	
 
 	//Birden fazla cümleyi klavyeden okutabilmek için getline fonksiyonu kullanılır.
 	//cin >> kelime; okunan değerin boşluğa kadar olan kısmını değişkene atamayı gerçekleştirir. 
@@ -62,7 +62,7 @@ int main()
 	cout << "Cumle:";
 	getline(cin, cumle);
 	cout << cumle << endl;
-	cout <<"Ýlk harf:" <<  ilk_harf(kelime) << endl;
+	cout <<"İlk harf:" <<  ilk_harf(kelime) << endl;
 	cout << "Kelimenin tersi:" << kelimenin_tersi(kelime) << endl;
 	cout << "Cümlenin tersi:" << kelimenin_tersi(cumle) << endl;
 	//kelimenin_tersi(kelime) dönen değeri bir string değerde saklayıp o değeri de kullanabiliriz.
