@@ -19,7 +19,8 @@ void asal_sayilar(int s1, int s2);
 int asal_sayi(int sira);
 
 char ilk_harf(string kelime);
-//string tanımlı fonksiyonlarda using namespace std; tanımlaması fonksiyon tanımlamasından önce gelmelidir. Ya da bunun için bir kütüphane tanımlaması yapılabilir.
+//string tanÄ±mlÄ± fonksiyonlarda using namespace std; tanÄ±mlamasÄ± fonksiyon tanÄ±mlamasÄ±ndan Ã¶nce gelmelidir. 
+//Ya da bunun iÃ§in bir kÃ¼tÃ¼phane tanÄ±mlamasÄ± yapÄ±labilir.
 string kelimenin_tersi(string kelime);
 
 int main()
@@ -46,13 +47,14 @@ int main()
 	cout << toplamlar << endl;
 	*/
 
-	//Birden fazla cümleyi klavyeden okutabilmek için getline fonksiyonu kullanılır.
-	//cin >> kelime; okunan değerin boşluğa kadar olan kısmını değişkene atamayı gerçekleştirir. Ama getline(cin,kelime) kodu enter'a basıncaya kadar olan tüm karakterleri string değişkende tutmamızı sağlar.
+	//Birden fazla cÃ¼mleyi klavyeden okutabilmek iÃ§in getline fonksiyonu kullanÄ±lÄ±r.
+	//cin >> kelime; okunan deÄŸerin boÅŸluÄŸa kadar olan kÄ±smÄ±nÄ± deÄŸiÅŸkene atamayÄ± gerÃ§ekleÅŸtirir. 
+	//Ama getline(cin,kelime) kodu enter'a basÄ±ncaya kadar olan tÃ¼m karakterleri string deÄŸiÅŸkende tutmamÄ±zÄ± saÄŸlar.
 	/*
 	getline(cin, kelime);
 	*/
 	
-	/*
+	
 	cout << ilk_harf("Beykoz") << endl;
 	cout << "Kelime:";
 	getline(cin, kelime);
@@ -60,20 +62,21 @@ int main()
 	cout << "Cumle:";
 	getline(cin, cumle);
 	cout << cumle << endl;
-	cout <<"İlk harf:" <<  ilk_harf(kelime) << endl;
+	cout <<"Ãlk harf:" <<  ilk_harf(kelime) << endl;
 	cout << "Kelimenin tersi:" << kelimenin_tersi(kelime) << endl;
-	cout << "Cümlenin tersi:" << kelimenin_tersi(cumle) << endl;
-	//kelimenin_tersi(kelime) dönen değeri bir string değerde saklayıp o değeri de kullanabiliriz.
+	cout << "CÃ¼mlenin tersi:" << kelimenin_tersi(cumle) << endl;
+	//kelimenin_tersi(kelime) dÃ¶nen deÄŸeri bir string deÄŸerde saklayÄ±p o deÄŸeri de kullanabiliriz.
 	if (kelimenin_tersi(kelime) == kelime) 
-		cout << kelime << " kelimesinin tersi kendisine eşit" << endl;
+		cout << kelime << " kelimesinin tersi kendisine eÅŸit" << endl;
 	else
-		cout << kelime << " kelimesinin tersi kendisine eşit değil" << endl;
+		cout << kelime << " kelimesinin tersi kendisine eÅŸit deÄŸil" << endl;
 
 	cout << "Mak:" << rastgele() << endl;
 	
 	mukemmel_sayi();
-	*/
-	cout << "2 sayı giriniz..:";
+	
+	
+	cout << "2 sayÃ½ giriniz..:";
 	cin >> sayi1 >> sayi2;
 	asal_sayilar(sayi1, sayi2);
 
@@ -84,8 +87,8 @@ int main()
 	return 1;
 
 	cout << "Deneme"; 
-	//return ifadesinden sonraki hiçbir kod çalışmaz. 
-	//Bunun nedeni fonksiyonun return işleminden sonra sona ermesidir.
+	//return ifadesinden sonraki hiÃ§bir kod Ã§alÄ±ÅŸmaz. 
+	//Bunun nedeni fonksiyonun return iÅŸleminden sonra sona ermesidir.
 }
 
 /*
@@ -97,49 +100,49 @@ fonksiyonun_icinde_yapilacak_islemler
 */
 
 //Parametre: null (yok)
-//Geri döndürdüğü değer void (yok)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer void (yok)
 void topla() {
-	cout << "void topla() fonksiyonu çalıştı." << endl;
+	cout << "void topla() fonksiyonu Ã§alÄ±ÅŸtÄ±." << endl;
 	int sayi1 = 3;
 	int sayi2 = 5;
 	cout << sayi1 + sayi2 << endl;
 }
 
 //Parametre: (int sayi1, int sayi2)
-//Geri döndürdüğü değer void (yok)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer void (yok)
 void topla(int sayi1, int sayi2) {
-	cout << "void topla(int sayi1, int sayi2) fonksiyonu çalıştı." << endl;
+	cout << "void topla(int sayi1, int sayi2) fonksiyonu Ã§alÄ±ÅŸtÄ±." << endl;
 	cout << sayi1 + sayi2 << endl;
 }
 
 //Parametre: (double sayi1, double sayi2)
-//Geri döndürdüğü değer void (yok)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer void (yok)
 void topla(double sayi1, double sayi2) {
-	cout << "void topla(double sayi1, double sayi2) fonksiyonu çalıştı." << endl;
+	cout << "void topla(double sayi1, double sayi2) fonksiyonu Ã§alÄ±ÅŸtÄ±." << endl;
 	cout << sayi1 + sayi2 << endl;
 }
 
 void topla(int s1, int s2, int s3) {
-	cout << "topla(int s1, int s2, int s3)fonksiyonu çalıştı." << endl;
+	cout << "topla(int s1, int s2, int s3)fonksiyonu Ã§alÄ±ÅŸtÄ±." << endl;
 	cout << s1 + s2 + s3 << endl;
 }
 
-//Kendisine gönderilen 2 tamsayının toplamını geri döndüren fonksiyon:
+//Kendisine gÃ¶nderilen 2 tamsayÄ±nÄ±n toplamÄ±nÄ± geri dÃ¶ndÃ¼ren fonksiyon:
 int toplam(int s1, int s2) {
-	cout << "int toplam(int s1, int s2)fonksiyonu çalıştı." << endl;
+	cout << "int toplam(int s1, int s2)fonksiyonu Ã§alÃ½Ã¾tÃ½." << endl;
 	return s1 + s2;
 }
 
-//Kendisine gönderilen kelimenin ilk harfini geri döndüren fonksiyon
+//Kendisine gÃ¶nderilen kelimenin ilk harfini geri dÃ¶ndÃ¼ren fonksiyon
 //Parametre : string kelime
-//Geri dönen değer : char
+//Geri dÃ¶nen deÃ°er : char
 char ilk_harf(string kelime) {
 	return kelime[0];
 }
 
-//Kendisine gönderilen kelimeyi tersini geri döndüren fonksiyon
-//Ör: kedi -> idek 
-//Ör: ipek -> kepi
+//Kendisine gÃ¶nderilen kelimeyi tersini geri dÃ¶ndÃ¼ren fonksiyon
+//Ã–r: kedi -> idek 
+//Ã–r: ipek -> kepi
 string kelimenin_tersi(string kelime) {
 	int uzunluk = kelime.length();
 	string tersi="";
@@ -151,14 +154,14 @@ string kelimenin_tersi(string kelime) {
 	return tersi;
 }
 //------PROBLEM:-----//
-//Rastgele üretilen 20 ile 36 arasındaki 6 sayıdan en büyük değeri geri döndüren fonksiyonu yazınız.
+//Rastgele Ã¼retilen 20 ile 36 arasÄ±ndaki 6 sayÄ±dan en bÃ¼yÃ¼k deÄŸeri geri dÃ¶ndÃ¼ren fonksiyonu yazÄ±nÄ±z.
 
 //Parametre : null (yok)
-//Geri döndürdüğü değer : int
-//Fonksiyon adı: rastgele
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer : int
+//Fonksiyon adÄ±: rastgele
 
 //int random=rand()%17+20; 
-//Son değer: 17+20-1=36
+//Son deÄŸer: 17+20-1=36
 
 //min=20;
 
@@ -176,11 +179,11 @@ int rastgele() {
 
 
 //------PROBLEM:-----//
-//1-9000 arasındaki mükemmel sayıları ekrana yazdıran fonksiyon
-//Mükemmel sayı: Kendisi hariç pozitif bölenlerinin toplamları kendisine eşit olan sayıdır.
-//Fonksiyon adı: mukemmel_sayi
+//1-9000 arasÄ±ndaki mÃ¼kemmel sayÄ±larÄ± ekrana yazdÄ±ran fonksiyon
+//MÃ¼kemmel sayÄ±: Kendisi hariÃ§ pozitif bÃ¶lenlerinin toplamlarÄ± kendisine eÅŸit olan sayÄ±dÄ±r.
+//Fonksiyon adÄ±: mukemmel_sayi
 //Parametre: null (yok)
-//Geri döndürdüğü değer: void (yok)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer: void (yok)
 void mukemmel_sayi() {
 	int toplam;
 	for (int sayi = 1; sayi <= 9000; sayi++)
@@ -192,18 +195,18 @@ void mukemmel_sayi() {
 				toplam += bolen;
 			}
 		}
-		if (toplam == sayi) //Sayı mükemmel sayıdır
+		if (toplam == sayi) //SayÄ± mÃ¼kemmel sayÄ±dÄ±r
 			cout << sayi << endl;
 	}
 }
 
 
 //------PROBLEM:-----//
-//Fonksiyonu gelen (Kullanıcının girdiği) iki değer arasındaki asal sayıları ekrana yazdıran fonksiyon
-//Asal sayı, 1 ve kendisi hariç böleni olmayan sayıdır
-//Fonksiyon adı: asal_sayilar
+//Fonksiyonu gelen (KullanÄ±cÄ±nÄ±n girdiÄŸi) iki deÄŸer arasÄ±ndaki asal sayÄ±larÄ± ekrana yazdÄ±ran fonksiyon
+//Asal sayÄ±, 1 ve kendisi hariÃ§ bÃ¶leni olmayan sayÄ±dÄ±r
+//Fonksiyon adÄ±: asal_sayilar
 //Parametre: int s1, int s2
-//Geri döndürdüğü değer: void (yok)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer: void (yok)
 void asal_sayilar(int s1, int s2) {
 	for (int sayi = s1; sayi <= s2; sayi++)
 	{
@@ -213,16 +216,16 @@ void asal_sayilar(int s1, int s2) {
 }
 
 bool asal(int sayi) {
-	bool kontrol = true; //sayı asaldır
+	bool kontrol = true; //sayÄ± asaldÄ±r
 	if (sayi <= 1)
 		kontrol = false;
 	else
 		for (int i = 2; i <= sayi/2; i++)
-		//Bir sayı kendisinin yarısından daha büyük sayılara bölünemez. 
-		//Bu yüzden i <= sayi/2 koşulunu kullandık.
+		//Bir sayÄ± kendisinin yarÄ±sÄ±ndan daha bÃ¼yÃ¼k sayÄ±lara bÃ¶lÃ¼nemez. 
+		//Bu yÃ¼zden i <= sayi/2 koÅŸulunu kullandÄ±k.
 		{
 			if (sayi%i == 0) {
-				kontrol = false; //sayı asal değildir
+				kontrol = false; //sayÄ± asal deÄŸildir
 				break;
 			}
 		}
@@ -230,10 +233,10 @@ bool asal(int sayi) {
 }
 
 //------PROBLEM:-----//
-//Kullanıcının girdiği sıradaki asal sayıyı geri döndüren fonksiyon
-//Fonksiyon adı: asal_sayi
+//KullanÄ±cÄ±nÄ±n girdiÄŸi sÄ±radaki asal sayÄ±yÄ± geri dÃ¶ndÃ¼ren fonksiyon
+//Fonksiyon adÄ±: asal_sayi
 //Parametre: int s1
-//Geri döndürdüğü değer: int
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer: int
 int asal_sayi(int sira) {
 	int sayi = 0, sayac=0;
 	while(sira>=1)
