@@ -24,8 +24,8 @@ bool hesap_giris2();
 int main()
 {
 	setlocale(LC_ALL, "turkish");
-	srand(time(NULL)); //Program her çalıştırıldığında Random ile üretilen değerlerin farklı değerler olmasını sağlar. 
-	//Ama bu sayının farklılıklarını ifade etmez. Yani 5 üretildiyse tekrar üretilebilir.
+	srand(time(NULL)); //Program her Ã§alÄ±ÅŸtÄ±rÄ±ldÄ±ÄŸÄ±nda Random ile Ã¼retilen deÄŸerlerin farklÄ± deÄŸerler olmasÄ±nÄ± saÄŸlar. 
+	//Ama bu sayÄ±nÄ±n farklÄ±lÄ±klarÄ±nÄ± ifade etmez. Yani 5 Ã¼retildiyse tekrar Ã¼retilebilir.
 	
 	cout << kare(1, 2) << endl;
 	cout << kare(3, 2) << endl;
@@ -36,9 +36,9 @@ int main()
 
 	kare_yazdir();
 
-	//Çıktı: Ör:5 girilirse; 5!=120
+	//Ã‡Ä±ktÄ±: Ã–r:5 girilirse; 5!=120
 	int sayi = 5;
-	cout << "faktoriyel() fonksiyonu çalışıyor...\n";
+	cout << "faktoriyel() fonksiyonu Ã§alÄ±ÅŸÄ±yor...\n";
 	cout << sayi << "!=" << faktoriyel(sayi) << endl;
 	sayi = 10;
 	cout << sayi << "!=" << faktoriyel(sayi) << endl;
@@ -47,7 +47,7 @@ int main()
 	sayi = -10;
 	cout << faktoriyel(sayi) << endl;
 
-	cout << "faktoriyel_yazdir() fonksiyonu çalışıyor...\n";
+	cout << "faktoriyel_yazdir() fonksiyonu Ã§alÄ±ÅŸÄ±yor...\n";
 	faktoriyel_yazdir(5);
 	faktoriyel_yazdir(-2);
 	faktoriyel_yazdir(0);
@@ -65,21 +65,21 @@ int main()
 	maks();
 	farklar();
 	cout << "admin - nimda" << endl;
-	cout <<"Hatalı giriş sayısı:" << hesap_giris() << endl;
+	cout <<"HatalÄ± giriÅŸ sayÄ±sÄ±:" << hesap_giris() << endl;
 
 	cout << "admin - nimda" << endl;
 	if (hesap_giris2())
-		cout << "Giriş başarılı" << endl;
+		cout << "GiriÅŸ baÅŸarÄ±lÄ±" << endl;
 	else
-		cout << "Giriş başarısız" << endl;
+		cout << "GiriÅŸ baÅŸarÄ±sÄ±z" << endl;
 	system("pause");
 	return 0;
 }
-//Örnek-1:
-//Kendisine gönderilen iki tamsayı değerinden büyük olanın karesini, 
-//sayılar eşitse sayılardan herhangi birini geri döndüren fonksiyonu yazınız.
+//Ã–rnek-1:
+//Kendisine gÃ¶nderilen iki tamsayÄ± deÄŸerinden bÃ¼yÃ¼k olanÄ±n karesini, 
+//sayÄ±lar eÅŸitse sayÄ±lardan herhangi birini geri dÃ¶ndÃ¼ren fonksiyonu yazÄ±nÄ±z.
 //Parametre: int sayi1, int sayi2
-//1.yöntem:
+//1.yÃ¶ntem:
 int kare(int sayi1,int sayi2) {
 	if (sayi1 > sayi2)
 		return sayi1 * sayi1;
@@ -88,7 +88,7 @@ int kare(int sayi1,int sayi2) {
 	else
 		return sayi1; //return sayi2;
 }
-//2.Yöntem:
+//2.YÃ¶ntem:
 int kare2(int sayi1, int sayi2) {
 	int sonuc;
 	if (sayi1 > sayi2)
@@ -100,12 +100,12 @@ int kare2(int sayi1, int sayi2) {
 	return sonuc;
 }
 
-//Örnek-2:
-//Girilen iki tamsayı değerini kare fonksiyonuna gönderip fonksiyondan gelen değeri ekrana yazdıran fonksiyonu yazınız. 
+//Ã–rnek-2:
+//Girilen iki tamsayÄ± deÄŸerini kare fonksiyonuna gÃ¶nderip fonksiyondan gelen deÄŸeri ekrana yazdÄ±ran fonksiyonu yazÄ±nÄ±z. 
 //Parametre : yok (null)
-//Gönderdiği değer: yok (void)
+//GÃ¶nderdiÄŸi deÄŸer: yok (void)
 void kare_yazdir() {
-	//fonksiyonun içerisinde return yoksa fonksiyon void olarak tanımlanır.
+	//fonksiyonun iÃ§erisinde return yoksa fonksiyon void olarak tanÄ±mlanÄ±r.
 	int s1, s2, sonuc;
 	cout << "2 sayi giriniz:";
 	cin >> s1 >> s2;
@@ -117,15 +117,15 @@ void kare_yazdir() {
 }
 
 
-//Örnek-3:
-//Kendisine gönderilen tamsayı değerinin faktöriyelini geri döndüren fonksiyonu yazınız. 
-//Eğer kendisine gönderilen sayı negatif ise 0 değerini döndürelim.
+//Ã–rnek-3:
+//Kendisine gÃ¶nderilen tamsayÄ± deÄŸerinin faktÃ¶riyelini geri dÃ¶ndÃ¼ren fonksiyonu yazÄ±nÄ±z. 
+//EÄŸer kendisine gÃ¶nderilen sayÄ± negatif ise 0 deÄŸerini dÃ¶ndÃ¼relim.
 //Not: 0!=1
 //5!=1*2*3*4*5 5!=5*4*3*2*1
 //Paremetre: int sayi
-//Geri dönen değer: int
+//Geri dÃ¶nen deÄŸer: int
 int faktoriyel(int sayi) {
-	int sonuc = 1; //Çarpmada 1 etkisiz eleman, 0 yutan eleman. Bu yüzden sonuc değerine 1 verdik
+	int sonuc = 1; //Ã‡arpmada 1 etkisiz eleman, 0 yutan eleman. Bu yÃ¼zden sonuc deÄŸerine 1 verdik
 	for (int i = 1; i <= sayi; i++)
 	{
 		sonuc *= i; //sonuc = sonuc * i;
@@ -140,32 +140,32 @@ int faktoriyel(int sayi) {
 }
 
 
-//Örnek-4:
-//Kendisine gönderilen sayıyı faktöriyel fonksiyonuna gönderip,
-//faktöriyel fonksiyonundan gelen değer 0 ise "... sayısının faktöriyeli yoktur.", 
-//0 değilse sayi!=sonuc Ör/5!=120 çıktısını versin
+//Ã–rnek-4:
+//Kendisine gÃ¶nderilen sayÄ±yÄ± faktÃ¶riyel fonksiyonuna gÃ¶nderip,
+//faktÃ¶riyel fonksiyonundan gelen deÄŸer 0 ise "... sayÄ±sÄ±nÄ±n faktÃ¶riyeli yoktur.", 
+//0 deÄŸilse sayi!=sonuc Ã–r/5!=120 Ã§Ä±ktÄ±sÄ±nÄ± versin
 void faktoriyel_yazdir(int sayi) {
 	int sonuc = faktoriyel(sayi);
 	if (sonuc == 0)
-		cout << sayi << " sayısının faktöriyeli yoktur.\n";
+		cout << sayi << " sayÄ±sÄ±nÄ±n faktÃ¶riyeli yoktur.\n";
 	else
 		cout << sayi << "!=" << sonuc << endl;
 }
 
 
 
-//Örnek-5:
-//Rastgele üretilen 1-100 arasında 5 sayının toplamını ekrana yazdıran fonksiyon
-//Parametre (Bu fonksiyona gönderilen değer) : YOK (NULL)
-//Geri döndürdüğü değer (Return değeri) : YOK (void)
+//Ã–rnek-5:
+//Rastgele Ã¼retilen 1-100 arasÄ±nda 5 sayÄ±nÄ±n toplamÄ±nÄ± ekrana yazdÄ±ran fonksiyon
+//Parametre (Bu fonksiyona gÃ¶nderilen deÄŸer) : YOK (NULL)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer (Return deÄŸeri) : YOK (void)
 void rastgele() {
 	int sayi, toplam=0;
 	for (int i = 1; i <= 5; i++) {
 		sayi = rand() % 100 + 1;
 		cout << sayi << endl;
-		//Ör: 20 ile 53 arasında değer üretin deseydim;
+		//Ã–r: 20 ile 53 arasÄ±nda deÄŸer Ã¼retin deseydim;
 		//sayi = rand() % 34 + 20;
-		//Ör: -20 ile 53 arasındaki değer üretin deseydim;
+		//Ã–r: -20 ile 53 arasÄ±ndaki deÄŸer Ã¼retin deseydim;
 		//sayi = rand() % 74 - 20;
 		toplam += sayi; //toplam = toplam + sayi;
 	}
@@ -173,40 +173,40 @@ void rastgele() {
 }
 
 
-//Örnek-6:
-//Rastgele üretilen 1-100 arasındaki 20 sayıdan tek olanları ve çift olanları ayrı ayrı ve alt alta ekrana yazdıran fonksiyon
-//Not: Değerler bir dizide tutulmak zorundadır
-//Parametre (Bu fonksiyona gönderilen değer) : YOK (NULL)
-//Geri döndürdüğü değer (Return değeri) : YOK (void)
+//Ã–rnek-6:
+//Rastgele Ã¼retilen 1-100 arasÄ±ndaki 20 sayÄ±dan tek olanlarÄ± ve Ã§ift olanlarÄ± ayrÄ± ayrÄ± ve alt alta ekrana yazdÄ±ran fonksiyon
+//Not: DeÄŸerler bir dizide tutulmak zorundadÄ±r
+//Parametre (Bu fonksiyona gÃ¶nderilen deÄŸer) : YOK (NULL)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer (Return deÄŸeri) : YOK (void)
 void rastgele2() {
 	int sayilar[20], i;
 	for (i = 0; i < 20; i++) {
 		sayilar[i] = rand() % 100 + 1;
 	}
-	cout << "Tek Sayılar\n";
+	cout << "Tek SayÄ±lar\n";
 	for (i = 0; i < 20; i++){
 		if (sayilar[i] % 2 == 1)
 			cout << sayilar[i] << endl;
 	}
-	cout << "Çift Sayılar\n";
+	cout << "Ã‡ift SayÄ±lar\n";
 	for (i = 0; i < 20; i++) {
 		if (sayilar[i] % 2 == 0)
 			cout << sayilar[i] << endl;
 	}
 }
 
-//Örnek-7:
-//Rastgele üretilen  1-100 arasındaki 20 sayıdan tek olanları ve çift olanları ayrı ayrı ve alt alta ekrana yazdıran,
-//tek ve çift sayıların toplamlarını ekrana yazdıran fonksiyon
-//Not: Değerler bir dizide tutulmak zorundadır
-//Parametre (Bu fonksiyona gönderilen değer) : YOK (NULL)
-//Geri döndürdüğü değer (Return değeri) : YOK (void)
+//Ã–rnek-7:
+//Rastgele Ã¼retilen  1-100 arasÄ±ndaki 20 sayÄ±dan tek olanlarÄ± ve Ã§ift olanlarÄ± ayrÄ± ayrÄ± ve alt alta ekrana yazdÄ±ran,
+//tek ve Ã§ift sayÄ±larÄ±n toplamlarÄ±nÄ± ekrana yazdÄ±ran fonksiyon
+//Not: DeÄŸerler bir dizide tutulmak zorundadÄ±r
+//Parametre (Bu fonksiyona gÃ¶nderilen deÄŸer) : YOK (NULL)
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer (Return deÄŸeri) : YOK (void)
 void rastgele3() {
 	int sayilar[20], i, tektoplam=0, cifttoplam=0;
 	for (i = 0; i < 20; i++) {
 		sayilar[i] = rand() % 100 + 1;
 	}
-	cout << "Tek Sayılar\n";
+	cout << "Tek SayÄ±lar\n";
 	for (i = 0; i < 20; i++) {
 		if (sayilar[i] % 2 == 1) {
 			cout << sayilar[i] << endl;
@@ -214,23 +214,24 @@ void rastgele3() {
 		}
 	}
 	cout << "Tek toplam:" << tektoplam << endl;
-	cout << "Çift Sayılar\n";
+	cout << "Ã‡ift SayÄ±lar\n";
 	for (i = 0; i < 20; i++) {
 		if (sayilar[i] % 2 == 0) {
 			cout << sayilar[i] << endl;
 			cifttoplam += sayilar[i];
 		}
 	}
-	cout << "Çift toplam:" << cifttoplam << endl;
+	cout << "Ã‡ift toplam:" << cifttoplam << endl;
 }
 
 
-//Örnek-8:
-//Fonksiyona gelen sayı kadar, fonksiyona gelen sayı aralığında değer üreten ve bu sayıları ekrana yazdırıp, sayıların toplamını geri döndüren fonksiyon
-//Parametre (Bu fonksiyona gönderilen değer) : int miktar, int baslangic, int bitis
-//Geri döndürdüğü değer (Return değeri) : int (toplam)
+//Ã–rnek-8:
+//Fonksiyona gelen sayÄ± kadar, fonksiyona gelen sayÄ± aralÄ±ÄŸÄ±nda deÄŸer Ã¼reten ve bu sayÄ±larÄ± ekrana yazdÄ±rÄ±p, 
+//sayÄ±larÄ±n toplamÄ±nÄ± geri dÃ¶ndÃ¼ren fonksiyon
+//Parametre (Bu fonksiyona gÃ¶nderilen deÄŸer) : int miktar, int baslangic, int bitis
+//Geri dÃ¶ndÃ¼rdÃ¼ÄŸÃ¼ deÄŸer (Return deÄŸeri) : int (toplam)
 int rastgele_toplam(int miktar, int baslangic, int bitis) {
-	cout << miktar << " tane sayı üretiliyor...\n";
+	cout << miktar << " tane sayÄ± Ã¼retiliyor...\n";
 	int sayi, toplam = 0;
 	for (int i = 1; i <= miktar; i++){
 		sayi = rand() % (bitis-baslangic+1) + baslangic;
@@ -240,50 +241,52 @@ int rastgele_toplam(int miktar, int baslangic, int bitis) {
 	return toplam;
 }
 
-//Örnek-9:Kullanıcı 0 sayısını girene kadar sayı girmesini sağlayıp, bu sayıların en büyüğünü (sıfır sayısını dahil etmeden büyük sayı bulunmalıdır) ekrana yazdıran fonksiyon
+//Ã–rnek-9:KullanÄ±cÄ± 0 sayÄ±sÄ±nÄ± girene kadar sayÄ± girmesini saÄŸlayÄ±p, bu sayÄ±larÄ±n en bÃ¼yÃ¼ÄŸÃ¼nÃ¼ 
+//(sÄ±fÄ±r sayÄ±sÄ±nÄ± dahil etmeden bÃ¼yÃ¼k sayÄ± bulunmalÄ±dÄ±r) ekrana yazdÄ±ran fonksiyon
 void maks() {
 	int sayi, mak=INT_MIN;
 	do
 	{
-		cout << "Sayı:";
+		cout << "SayÄ±:";
 		cin >> sayi;
 		if (mak < sayi && sayi!=0) {
-			//sıfırı dahil etmememizin sebebi tüm sayıların negatif girilmesi durumu içindir
+			//sÄ±fÄ±rÄ± dahil etmememizin sebebi tÃ¼m sayÄ±larÄ±n negatif girilmesi durumu iÃ§indir
 			mak = sayi;
 		}
 	} while (sayi!=0);
-	cout << "Maksimum değer:" << mak << endl;
+	cout << "Maksimum deÄŸer:" << mak << endl;
 }
 
-//Örnek-10:Kullanıcı 0 sayısını girene kadar sayı girmesini sağlayıp, bu sayıların farklarını ekrana yazdıran fonksiyon
-//Ör: 3 4 girdiğinde Çıktı:-1, 6 girdiğinde Çıktı:-2, 0 girdiğinde Çıktı:6 program sonlanır.
+//Ã–rnek-10:KullanÄ±cÄ± 0 sayÄ±sÄ±nÄ± girene kadar sayÄ± girmesini saÄŸlayÄ±p, bu sayÄ±larÄ±n farklarÄ±nÄ± ekrana yazdÄ±ran fonksiyon
+//Ã–r: 3 4 girdiÄŸinde Ã‡Ä±ktÄ±:-1, 6 girdiÄŸinde Ã‡Ä±ktÄ±:-2, 0 girdiÄŸinde Ã‡Ä±ktÄ±:6 program sonlanÄ±r.
 void farklar() {
 	int ilksayi, sayi;
-	cout << "Sayı:";
+	cout << "SayÄ±:";
 	cin >> ilksayi;
 	do
 	{
-		cout << "Sayı:";
+		cout << "SayÄ±:";
 		cin >> sayi;
 		cout <<"Fark:" << ilksayi-sayi << endl;
 		ilksayi = sayi;
 	} while (sayi != 0);
 }
 
-//Örnek-11:Kullanıcı adı ve parola girişi doğru olana kadar kontrol edip, kullanıcı adı ve parola bilgisinin kaç kere yanlış girildiğini geri döndüren fonksiyon
+//Ã–rnek-11:KullanÄ±cÄ± adÄ± ve parola giriÅŸi doÄŸru olana kadar kontrol edip, kullanÄ±cÄ± adÄ± ve parola bilgisinin 
+//kaÃ§ kere yanlÄ±ÅŸ girildiÄŸini geri dÃ¶ndÃ¼ren fonksiyon
 int hesap_giris() {
 	string k_adi, parola;
 	int miktar = 0;
 	do
 	{
-		cout << "Kullanıcı adı:";
+		cout << "KullanÄ±cÄ± adÄ±:";
 		cin >> k_adi;
 		cout << "Parola:";
 		cin >> parola;
 		if (k_adi == "admin" && parola == "nimda") {
-			//yazılım güvenliği söz konusu değil. 
-			//Kullanıcı adı ve şifre kontrol esnasında kodda olmamalı
-			cout << "Giriş başarılı\n";
+			//yazÄ±lÄ±m gÃ¼venliÄŸi sÃ¶z konusu deÄŸil. 
+			//KullanÄ±cÄ± adÄ± ve ÅŸifre kontrol esnasÄ±nda kodda olmamalÄ±
+			cout << "GiriÅŸ baÅŸarÄ±lÄ±\n";
 			break;
 		}
 		else
@@ -292,20 +295,21 @@ int hesap_giris() {
 	return miktar;
 }
 
-//Örnek-12:Kullanıcıdan kullanıcı adı ve parola girişi alıp  kontrol edelim, 3 yanlış yapma hakkı olsun. Girişin başarılı bir şekilde olup olmadığını (bool değer) döndürsün ve kaç hakkı kaldığını ekrana yazdırsın
+//Ã–rnek-12:KullanÄ±cÄ±dan kullanÄ±cÄ± adÄ± ve parola giriÅŸi alÄ±p  kontrol edelim, 3 yanlÄ±ÅŸ yapma hakkÄ± olsun. 
+//GiriÅŸin baÅŸarÄ±lÄ± bir ÅŸekilde olup olmadÄ±ÄŸÄ±nÄ± (bool deÄŸer) dÃ¶ndÃ¼rsÃ¼n ve kaÃ§ hakkÄ± kaldÄ±ÄŸÄ±nÄ± ekrana yazdÄ±rsÄ±n
 bool hesap_giris2() {
 	string k_adi, parola;
 	int hak = 3;
 	bool durum = false;
 	do
 	{
-		cout << "Kullanıcı adı:";
+		cout << "KullanÄ±cÄ± adÄ±:";
 		cin >> k_adi;
 		cout << "Parola:";
 		cin >> parola;
 		if (k_adi == "admin" && parola == "nimda") {
-			//yazılım güvenliği söz konusu değil. 
-			//Kullanıcı adı ve şifre kontrol esnasında kodda olmamalı
+			//yazÄ±lÄ±m gÃ¼venliÄŸi sÃ¶z konusu deÄŸil. 
+			//KullanÄ±cÄ± adÄ± ve ÅŸifre kontrol esnasÄ±nda kodda olmamalÄ±
 			durum = true;
 			break;
 		}
