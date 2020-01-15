@@ -23,25 +23,25 @@ int main() {
 	int *p = &sayi;
 	
 	cout << "sayi:" << sayi << endl;
-	cout << "&sayi:"<< &sayi << endl;//değerin tutulduğu adres değerini yazdırır
+	cout << "&sayi:"<< &sayi << endl;//deÄŸerin tutulduÄŸu adres deÄŸerini yazdÄ±rÄ±r
 
-	cout << "p:" << p << endl; //içinde tuttuğu adresi yazdırır
-	cout << "*p:" << *p << endl; //içinde tuttuğu adresteki değeri yazdırır
+	cout << "p:" << p << endl; //iÃ§inde tuttuÄŸu adresi yazdÄ±rÄ±r
+	cout << "*p:" << *p << endl; //iÃ§inde tuttuÄŸu adresteki deÄŸeri yazdÄ±rÄ±r
 	
 	arttir5(sayi);
-	cout <<"arttir5(sayi) fonksiyonu çalıştı..: " << sayi << endl;
+	cout <<"arttir5(sayi) fonksiyonu Ã§alÄ±ÅŸtÄ±..: " << sayi << endl;
 
 	arttir5(&sayi);
-	cout << "arttir5(&sayi) fonksiyonu çalıştı..: " << sayi << endl;
+	cout << "arttir5(&sayi) fonksiyonu Ã§alÄ±ÅŸtÄ±..: " << sayi << endl;
 	
-	kat(&sayi); //sayının işaret ettiği adres (işaretçi/pointer) bilgisini  kat fonksiyonuna parametre olarak gönderdik
+	kat(&sayi); //sayÄ±nÄ±n iÅŸaret ettiÄŸi adres (iÅŸaretÃ§i/pointer) bilgisini  kat fonksiyonuna parametre olarak gÃ¶nderdik
 	cout << "sayi:" << sayi << endl;
 
 	string kelime;
 	cout << "Kelime:";
 	cin >> kelime;
 	//getline(cin, kelime);
-	//Birden fazla kelimeyi değişken içinde tutmayı sağlar.
+	//Birden fazla kelimeyi deÄŸiÅŸken iÃ§inde tutmayÄ± saÄŸlar.
 	tersine(&kelime);
 	cout << "kelime:" << kelime << endl;
 	
@@ -49,13 +49,14 @@ int main() {
 	int toplam = * rastgele();
 	cout << "Toplam:" << toplam << endl;
 
-	//Kullanıcı 0 girene kadar girdiği değerlerin pozitif olanlarını ve negatif olanlarını bir değişkende tutup bu değerleri main içerisinde yazdıralım
+	//KullanÄ±cÄ± 0 girene kadar girdiÄŸi deÄŸerlerin pozitif olanlarÄ±nÄ± ve negatif olanlarÄ±nÄ± bir deÄŸiÅŸkende tutup 
+	//bu deÄŸerleri main iÃ§erisinde yazdÄ±ralÄ±m
 	int s, ptoplam=0, ntoplam=0;
-	cout << endl << "Burada girdiğiniz pozitif ve negatif sayıların toplamı hesaplanacaktır." << endl;
-	cout << "Çıkmak için 0 değerini giriniz..." << endl;
+	cout << endl << "Burada girdiÄŸiniz pozitif ve negatif sayÄ±larÄ±n toplamÄ± hesaplanacaktÄ±r." << endl;
+	cout << "Ã‡Ä±kmak iÃ§in 0 deÄŸerini giriniz..." << endl;
 	do
 	{
-		cout << "Sayı:";
+		cout << "SayÄ±:";
 		cin >> s;
 		neg_poz(&s, &ptoplam, &ntoplam);
 	} while (s!=0);
@@ -69,12 +70,12 @@ int main() {
 	return 1;
 }
 void arttir5(int sayi) {
-	//kendisine gönderilen sayi değişkeninin kopyasını oluşturdu.
-	//Bu sebeple gönderilen fonksiyon içerisindeki bu değer değişmedi.
+	//kendisine gÃ¶nderilen sayi deÄŸiÅŸkeninin kopyasÄ±nÄ± oluÅŸturdu.
+	//Bu sebeple gÃ¶nderilen fonksiyon iÃ§erisindeki bu deÄŸer deÄŸiÅŸmedi.
 	sayi += 5;
 }
 
-//Kendisine gönderilen bellek adresinin içinde saklanan değeri 5 arttıran fonksiyon:
+//Kendisine gÃ¶nderilen bellek adresinin iÃ§inde saklanan deÄŸeri 5 arttÄ±ran fonksiyon:
 void arttir5(int *p) {
 	cout << "p:" << p << endl;
 	*p += 5; // *p = *p + 5;
@@ -82,31 +83,31 @@ void arttir5(int *p) {
 	cout << "&p:" << &p << endl; //p adresi
 }
 
-//Problem: Kullanıcıdan alınan değeri fonksiyon parametre olarak alsın ve 
-//bu değeri fonksiyon içerisinde kullanıcının girdiği kata eşitlesin
-//Ör:main içinde 4 girilirse, fonksiyonda 5 girilirse, mainden gelen 4 değeri 20 olacak
+//Problem: KullanÄ±cÄ±dan alÄ±nan deÄŸeri fonksiyon parametre olarak alsÄ±n ve 
+//bu deÄŸeri fonksiyon iÃ§erisinde kullanÄ±cÄ±nÄ±n girdiÄŸi kata eÅŸitlesin
+//Ã–r:main iÃ§inde 4 girilirse, fonksiyonda 5 girilirse, mainden gelen 4 deÄŸeri 20 olacak
 void kat(int *ptr) {
 	int kat;
-	cout << "Kat değeri:";
+	cout << "Kat deÄŸeri:";
 	cin >> kat;
 	*ptr = *ptr * kat; // *ptr *= kat;
-	//*ptr pointer'ın tuttuğu adresteki veriye gitti ve bu değeri kat değeriyle çarpıp yeni değeri yaptı.
+	//*ptr pointer'Ä±n tuttuÄŸu adresteki veriye gitti ve bu deÄŸeri kat deÄŸeriyle Ã§arpÄ±p yeni deÄŸeri yaptÄ±.
 }
 
-//Kendisine gönderilen kelimenin adresini (pointer) tutan fonksiyon tanımlayalım. Bu kelimeyi fonksiyon içinde tersine dönüştürelim.
-//ÖR: kendisine "kedi" kelimesi geldiğinde, kelime "idek" olacak.
+//Kendisine gÃ¶nderilen kelimenin adresini (pointer) tutan fonksiyon tanÄ±mlayalÄ±m. Bu kelimeyi fonksiyon iÃ§inde tersine dÃ¶nÃ¼ÅŸtÃ¼relim.
+//Ã–R: kendisine "kedi" kelimesi geldiÄŸinde, kelime "idek" olacak.
 void tersine(string *p) {
 	string ters = "";
 	int uzunluk = (*p).length();
 	for (int i = uzunluk-1; i >=0; i--)
-		//uzunluk kelimenin karakter sayısını tutuyor. İndis değerimiz sıfırdan başladığı için 1 eksiğini aldık.
+		//uzunluk kelimenin karakter sayÄ±sÄ±nÄ± tutuyor. Ä°ndis deÄŸerimiz sÄ±fÄ±rdan baÅŸladÄ±ÄŸÄ± iÃ§in 1 eksiÄŸini aldÄ±k.
 	{
 		ters += (*p)[i];
 	}
 	*p = ters;
 }
 
-//random ile oluşturulan 1-10 arasındaki 10 sayının toplamının tutulduğu adresi çağrıldığı fonksiyona gönderen fonksiyonu yazalım.
+//random ile oluÅŸturulan 1-10 arasÄ±ndaki 10 sayÄ±nÄ±n toplamÄ±nÄ±n tutulduÄŸu adresi Ã§aÄŸrÄ±ldÄ±ÄŸÄ± fonksiyona gÃ¶nderen fonksiyonu yazalÄ±m.
 int * rastgele() {
 	int sayi, toplam = 0;
 	for (int i = 1; i <= 10; i++)
@@ -127,7 +128,7 @@ void neg_poz(int *s, int *ptoplam, int *ntoplam) {
 		*ntoplam += *s;
 }
 
-//10 tane 0-100 arasında rastgele üretilen sayıyı bir dizide tutarak bu değerleri adres değerleri ile yazdıralım
+//10 tane 0-100 arasÄ±nda rastgele Ã¼retilen sayÄ±yÄ± bir dizide tutarak bu deÄŸerleri adres deÄŸerleri ile yazdÄ±ralÄ±m
 void random() {
 	int sayilar[10];
 	for (int i = 0; i < 10; i++){
@@ -140,10 +141,10 @@ void random() {
 	cout << "p+1:" << p + 1 << endl;
 	cout << "*p:" << *p << endl;
 	cout << "*(p+1):" << *(p + 1) << endl;
-	//p+1 adresinde tutulan değeri getirir
+	//p+1 adresinde tutulan deÄŸeri getirir
 	cout << "*p+1:" << *p + 1 << endl;
-	//p adresinde tutulan değerin 1 fazlasını getirir
-	cout << "Değerler:" << endl;
+	//p adresinde tutulan deÄŸerin 1 fazlasÄ±nÄ± getirir
+	cout << "DeÄŸerler:" << endl;
 	for (int i = 0; i < 10; i++){
 		cout << *(p+i) << " ";
 	}
@@ -153,7 +154,7 @@ void random() {
 		cout << p + i << endl;
 	}
 	cout << endl;
-	cout << "Adresler:\tDeğerler:\n";
+	cout << "Adresler:\tDeÄŸerler:\n";
 	for (int i = 0; i < 10; i++) {
 		cout << p + i << "\t" << *(p + i) << endl;
 	}
